@@ -1,0 +1,41 @@
+.cover-container{
+    height: 100vh; /*altura contenedor*/
+    width: 100%;   /*ancho contenedor*/
+    object-fit: contain; /*siempre el mismo ancho sin importar dispositivo*/
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6); /*efecto de opacidad del contenedor sobre el video*/
+    display: flex;            /*centramos el contenido del contenedor, textos y tittulos*/
+    flex-direction: column;   /*centramos el contenido del contenedor, textos y tittulos*/
+    justify-content: center;  /*centramos el contenido del contenedor, textos y tittulos*/
+    align-items: center;      /*centramos el contenido del contenedor, textos y tittulos*/
+}
+
+.video{
+    object-fit: cover;/*para que ocupe el 100% del contenedor*/
+    width: 100%;/*ancho video*/
+    height: 100vh;/*altura video*/
+    position: absolute;
+    z-index: -1; /*el video queda debajo del contenedor*/
+}
+
+.cover-container > h1{
+    color: white;
+    font-size: 80px;
+}
+
+.cover-container > p{
+    margin-top: 8px;
+    color: white;
+    font-size: 32px;
+}
+
+@media screen and (max-width: 960px) {
+    .cover-container > h1{
+        font-size: 70px;
+        text-align: center;
+    }
+    .cover-container >p{
+        text-align: center;
+        font-size: 22px;
+        width: 85%;
+    }
+}
